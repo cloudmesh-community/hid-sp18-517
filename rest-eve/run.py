@@ -5,12 +5,6 @@ import os
 
 app = Eve()
 
-#print platform.machine();
-platform.machine();
-
-#print platform.version();
-platform.version();
-
 # processor family
 @app.route('/processor')
 
@@ -70,14 +64,12 @@ def battery():
 @app.route('/proc_parts')
 
 def proc_parts():
-        #batt = psutil.sensors_battery()
-        #parts =  os.system('cat /proc/partitions')
 
 	os.system('cat /proc/partitions > /tmp/parts')
 	parts = open('/tmp/parts', 'r').read()
         return parts
 	os.remove('/tmp/parts')
 
-
 if __name__ == '__main__':
 	app.run()
+
