@@ -115,13 +115,6 @@ def battery():
 
 
         collection.insert(memData)
- #       db.memInfo.insert(mem_param)
-
-        #a= str(mem_param)
-        #return str(a)
-        #type(mem_param)
-
-        #MongoDBConn('memInfo', mem_param)
 
 	return mem_param
         batt = psutil.sensors_battery()
@@ -139,19 +132,14 @@ def proc_parts():
 	os.remove('/tmp/parts')
 
 
-
-# Mongo DB function
-def MongoDBConn(dbname,JSObj):
-	client = MongoClient("mongodb://localhost:27017")
-	db = client.student_db
-	memInfo = db.memInfo
-	memInfo.insert(JSObj)
-
-
-
-
-
-
 if __name__ == '__main__':
 	app.run()
 
+
+# References:
+
+#https://docs.python.org/2/library/platform.html
+#https://pypi.python.org/pypi/psutil
+#http://www.tldp.org/LDP/Linux-Filesystem-Hierarchy/html/proc.html
+#https://stackoverflow.com/questions/4760215
+#https://stackoverflow.com/questions/4404742/
