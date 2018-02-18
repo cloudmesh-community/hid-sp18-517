@@ -16,16 +16,28 @@ schemes:
 - "http"
 consumes:
 - "application/json"
+- "application/xml"
 produces:
 - "application/json"
+- "application/xml"
 paths:
   /add:
     get:
-      description: "Returns addition result information of the hosting server"
+      description: "Returns addition result from the hosting server"
       operationId: "add_num"
       produces:
       - "application/json"
-      parameters: []
+      parameters:
+      - name: "number1"
+        in: "query"
+        description: "Number 1"
+        required: true
+        type: "integer"
+      - name: "number2"
+        in: "query"
+        description: "Number 2"
+        required: true
+        type: "integer"
       responses:
         200:
           description: "Addition result"
