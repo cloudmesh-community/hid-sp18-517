@@ -1,0 +1,22 @@
+\section{Sqoop}
+
+"Sqoop is a tool designed to transfer data between Hadoop and 
+relational databases or mainframes. Sqoop can be used to import 
+data from a relational database management system (RDBMS) such 
+as MySQL or Oracle or a mainframe into the Hadoop Distributed 
+File System (HDFS), transform the data in Hadoop MapReduce, and 
+then export the data back into an RDBMS." \cite{hid-sp18-517-Sqoop}
+
+Sqoop relies on the database to describe the schema of the data 
+being imported. It uses MapReduce to import and export the data, 
+which provides parallel operation as well as fault tolerance. 
+For databases, Sqoop reads the table row-by-row into HDFS. 
+For mainframe datasets, Sqoop reads records from each mainframe 
+dataset into HDFS. The output of this import process is a set of 
+files containing a copy of the imported table or datasets. Since 
+the import process runs in parallel processes each process 
+creates a file causing multiple files being created. These text 
+files can use different delimiters such as comma, pipe and so on. 
+\cite{hid-sp18-517-Sqoop}
+
+
