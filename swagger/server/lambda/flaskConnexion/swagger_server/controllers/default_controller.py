@@ -13,4 +13,8 @@ def add_num():  # noqa: E501
 
     :rtype: ADD
     """
-    return 'do some magic!'
+    #return 'do some magic!'
+    f = lambda x,y : x + y
+    add = f(1,3)
+    return add
+
