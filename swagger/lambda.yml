@@ -1,6 +1,6 @@
 swagger: "2.0"
 info: 
-  version: "0.0.1"
+  version: "1.0.2"
   title: "Lambda Functions"
   description: "REST service to get results from a lambda function using swagger-2.0 specification and codegen"
   termsOfService: "http://swagger.io/terms/"
@@ -40,7 +40,39 @@ paths:
         "200":
           description: "Addition result"
           schema: 
-            $ref: "#/definitions/ADD"
+           $ref: "#/definitions/ADD"
+  /convert:
+    get: 
+      description: "Convert XML to JSON"
+      operationId: "xml2json"
+      produces: 
+        - "application/json"
+      parameters:
+      - name: xmlStr
+        in: query
+        description: "XML String"
+        required: true
+        type: string
+      responses: 
+        "200":
+          description: "Converted JSON String"
+          schema: 
+           $ref: "#/definitions/ADD"
+  /upload:
+    post:
+      summary: "Upload a file"
+      consumes: 
+        - multipart/form-data
+      produces: 
+        - multipart/form-data
+      parameters:
+        - in: formData
+          name: filename
+          type: file
+          description: "File to be converted"
+      responses: 
+        "200":
+          description: "File uploaded"
 definitions:
   ADD:
     type: "object"
