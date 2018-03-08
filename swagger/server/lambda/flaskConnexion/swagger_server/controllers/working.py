@@ -3,10 +3,6 @@ import six
 
 from swagger_server.models.add import ADD  # noqa: E501
 from swagger_server import util
-from fileupload import fileupload
-from math import math
-from xmltojson import xml2json_conv
-
 
 from flask import Flask, render_template, request
 from werkzeug import secure_filename
@@ -25,19 +21,21 @@ def add_num(number1, number2):  # noqa: E501
 
     :rtype: ADD
     """
-#    sum = number1 + number2
-#    return sum
-    return math(number1, number2)
+    sum = number1 + number2
+    return sum
     #return 'do some magic!'
 
 
+     # noqa: E501
+
+#@app.route('/uploader', methods = ['GET', 'POST'])
 
 def upload_file():
+   #iFile = request.files.getlist('file')[0]
    if request.method == 'POST':
-       return fileupload('file_name')
-#      f = request.files['file_name']
-#      f.save(secure_filename(f.filename))
-#      return 'file uploaded successfully'
+      f = request.files['file_name']
+      f.save(secure_filename(f.filename))
+      return 'file uploaded successfully'
 
    """
       :param filename: File to be converted
@@ -45,6 +43,10 @@ def upload_file():
 
       :rtype: None
     """
+    #test = storage.read(filename)
+    #print filename
+    #return 'do some magic!'
+    #return test
 
 def xml2json(xmlStr):  # noqa: E501
     """xml2json
@@ -57,5 +59,4 @@ def xml2json(xmlStr):  # noqa: E501
     :rtype: ADD
     """
     #return 'do some magic!'
-    return xml2json_conv(xmlStr)
-
+    return xmlStr

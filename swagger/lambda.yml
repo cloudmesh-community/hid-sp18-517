@@ -60,14 +60,16 @@ paths:
            $ref: "#/definitions/ADD"
   /upload:
     post:
-      summary: "Upload a file"
+      description: "Upload a file"
+      operationId: "upload_file"
       consumes: 
         - multipart/form-data
       produces: 
         - multipart/form-data
       parameters:
         - in: formData
-          name: filename
+          name: file_name
+          required: true
           type: file
           description: "File to be converted"
       responses: 
