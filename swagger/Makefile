@@ -2,6 +2,7 @@
 SOURCE_YAML_FILE=lambda.yml
 SWAGGER_ROOT=~/swagger
 
+container:
 
 service: 
 	swagger-codegen generate \
