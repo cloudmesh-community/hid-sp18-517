@@ -1,9 +1,9 @@
 # Make file for swagger 
 # define macros
 SWAGGER_CODEGEN=java -jar lib/swagger-codegen-cli.jar
-SOURCE_YAML_FILE=lambda.yml
+SOURCE_YAML_FILE=fileupload.yml
 SWAGGER_ROOT=~/swagger
-FLASK_APP_PATH=server/lambda/flaskConnexion
+FLASK_APP_PATH=server/fileupload/flaskConnexion
 container:
 
 service: 
@@ -34,6 +34,5 @@ clean:
 	#ps -ef | egrep 'swagger_server'  | grep -v grep | awk '{print $2}' | xargs kill -9
 	stop
 	rm -fR $SWAGGER_ROOT
-
 
 
