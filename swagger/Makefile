@@ -31,7 +31,8 @@ stop:
 
 clean:
 	#stop process and remove the swagger root directory
-	ps -ef | egrep 'swagger_server'  | grep -v grep | awk '{print $2}' | xargs kill -9
+	#ps -ef | egrep 'swagger_server'  | grep -v grep | awk '{print $2}' | xargs kill -9
+	stop
 	rm -fR $SWAGGER_ROOT
 
 
