@@ -1,14 +1,16 @@
 # Make file for swagger 
+# define macros
+SWAGGER_CODEGEN=java -jar lib/swagger-codegen-cli.jar
 SOURCE_YAML_FILE=lambda.yml
 SWAGGER_ROOT=~/swagger
-
+FLASK_APP_PATH=server/lambda/flaskConnexion
 container:
 
 service: 
-	swagger-codegen generate \
+	${SWAGGER_CODEGEN} generate \
 	-i $SWAGGER_ROOT/$SOURCE_YAML_FILE \
 	-l python-flask \
-	-o $SWAGGER_ROOT/server/lambda/flaskConnexion \
+	-o ${SWAGGER_ROOT}/${FLASK_APP_PATH} \
 	-D supportPython2=true
 	
 
@@ -25,7 +27,9 @@ stop:
 	ps -ef | egrep 'swagger_server'  | grep -v grep | awk '{print $2}' | xargs kill -9
 
 clean:
-	#open abstract.pdf
+	#stop process and remove the swagger root directory
+	ps -ef | egrep 'swagger_server'  | grep -v grep | awk '{print $2}' | xargs kill -9
 	rm -fR $SWAGGER_ROOT
+
 
 
