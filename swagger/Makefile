@@ -7,6 +7,9 @@ FLASK_APP_PATH=server/lambda/flaskConnexion
 container:
 
 service: 
+	
+	pip install -r requirements.txt
+	
 	${SWAGGER_CODEGEN} generate \
 	-i $SWAGGER_ROOT/$SOURCE_YAML_FILE \
 	-l python-flask \
