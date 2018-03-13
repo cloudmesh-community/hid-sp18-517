@@ -1,0 +1,86 @@
+swagger: '2.0'
+info:
+  version: 1.0.2
+  title: File upload
+  description: REST service to upload a file using swagger-2.0 specification and codegen
+  termsOfService: 'http://swagger.io/terms/'
+  contact:
+    name: REST Service for Lambda Functions using Swagger
+  license:
+    name: Apache
+host: 'localhost:8080'
+basePath: /api
+schemes:
+  - http
+consumes:
+  - application/json
+  - application/xml
+produces:
+  - application/json
+  - application/xml
+paths:
+  /upload:
+    post:
+      description: Upload a file
+      operationId: upload_file
+      consumes:
+        - multipart/form-data
+      produces:
+        - multipart/form-data
+      parameters:
+        - in: formData
+          name: file_name
+          required: true
+          type: file
+          description: File to be converted
+      responses:
+        '200':
+          description: File uploaded
+  /add:
+    get:
+      description: Returns addition result from the hosting server
+      operationId: addNum
+      produces:
+        - application/json
+      parameters:
+        - name: number1
+          in: query
+          description: Number 1
+          required: true
+          type: integer
+        - name: number2
+          in: query
+          description: Number 2
+          required: true
+          type: integer
+      responses:
+        '200':
+          description: Addition result
+          schema:
+            $ref: '#/definitions/ADD'
+  /convert:
+    get:
+      description: Convert XML to JSON
+      operationId: xml2json
+      produces:
+        - application/json
+      parameters:
+        - name: xmlStr
+          in: query
+          description: XML String
+          required: true
+          type: string
+      responses:
+        '200':
+          description: Converted JSON String
+          schema:
+            $ref: '#/definitions/ADD'
+definitions:
+  ADD:
+    type: object
+    required:
+      - model
+    properties:
+      model:
+        type: string
+
