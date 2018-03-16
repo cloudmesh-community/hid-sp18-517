@@ -1,8 +1,8 @@
 # Make file for swagger 
 # define macros
-SWAGGER_CODEGEN=java -jar lib/swagger-codegen-cli.jar
+SWAGGER_CODEGEN=java -jar swagger-codegen-cli.jar
 SOURCE_YAML_FILE=fileupload.yml
-SWAGGER_ROOT=~/swagger
+SWAGGER_ROOT=./swagger
 FLASK_APP_PATH=server/fileupload/flaskConnexion
 
 container:
@@ -12,7 +12,7 @@ service:
 	#pip install -r requirements.txt
 	
 	${SWAGGER_CODEGEN} generate \
-	-i $SWAGGER_ROOT/$SOURCE_YAML_FILE \
+	-i ${SWAGGER_ROOT}/${SOURCE_YAML_FILE} \
 	-l python-flask \
 	-o ${SWAGGER_ROOT}/${FLASK_APP_PATH} \
 	-D supportPython2=true
