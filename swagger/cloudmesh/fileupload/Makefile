@@ -22,7 +22,8 @@ start:
 	cd ${SWAGGER_ROOT}/${FLASK_APP_PATH}
 	python -m swagger_server
 test:
-	curl -X POST "http://localhost:8080/api/upload" -H  "accept: multipart/form-data" -H  "Content-Type: multipart/form-data" -F "file_name=@README.md;type=text/markdown"
+	touch samplefile.txt
+	curl -X POST "http://localhost:8080/api/upload" -H  "accept: multipart/form-data" -H  "Content-Type: multipart/form-data" -F "file_name=@samplefile.txt;type=text/markdown"
 
 
 stop:
