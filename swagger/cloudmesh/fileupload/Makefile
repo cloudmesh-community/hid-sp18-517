@@ -1,6 +1,6 @@
 # Make file for swagger 
 # define macros
-SWAGGER_CODEGEN=java -jar swagger-codegen-cli.jar
+SWAGGER_CODEGEN=java -jar swagger-codegen-cli-2.3.1.jar
 SOURCE_YAML_FILE=fileupload.yml
 SWAGGER_ROOT=./swagger
 FLASK_APP_PATH=server/fileupload/flaskConnexion
