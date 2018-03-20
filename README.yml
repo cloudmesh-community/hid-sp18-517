@@ -1,10 +1,5 @@
-# This file will have to be updated by you throughout the semester, for
-# now just fill out the owner.  This is a yaml file and must be validated
-# by you. If you do nopt know how to do that, your first task is to
-# write a python3 program that does this.
----
 owner:
-  - firstname: "Harshad"
-  - lastname: "Pitkar"
-  - hid: "hid-sp18-517"
-  - community: "i524"
+  firstname: "Harshad"
+  lastname: "Pitkar"
+  hid: "hid-sp18-517"
+  community: "i524"
