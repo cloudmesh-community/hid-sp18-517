@@ -61,7 +61,7 @@ List Containers function list all the containers of buckets available for the us
 
 
 	cls = get_driver(Provider.S3_US_EAST2)
-	driver = cls('AKIAI4HSYRUQNRBHIVOA','2sjLL22snaRk7zDBTel+i+m+AMuYXFLMFAL+a4Y1')
+	driver = cls('api key', 'api secret key')
  
 	d = driver.list_containers();
 
@@ -111,21 +111,6 @@ Upload a file helps in uploading a local file to S3 bucket.
                                           container=container,
                                           object_name='backup.tar.gz',
                                           extra=extra)
-
-List Containers
----------------
-
-	from libcloud.storage.types import Provider
-	from libcloud.storage.providers import get_driver
-
-
-	cls = get_driver(Provider.S3_US_EAST2)
-	driver = cls('AKIAI4HSYRUQNRBHIVOA','2sjLL22snaRk7zDBTel+i+m+AMuYXFLMFAL+a4Y1')
- 
-	d = driver.list_containers();
-
-	print d;
-
 
 
 References
