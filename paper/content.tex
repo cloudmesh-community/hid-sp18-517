@@ -40,7 +40,6 @@ of a workflow is called a workbench.
 
 \keywords{hid-sp18-517, KNIME, Workflow, Text, mining}
 
-
 \maketitle
 
 \section{Introduction}
@@ -75,19 +74,21 @@ environments~\cite{hid-sp18-517-ksw}.  See Figure~\ref{fig:knimearch}
 \begin{figure}[!ht]
 	\centering\includegraphics[width=\columnwidth]{../images/knimearch.png}
 	\caption{KNIME Architecture~\cite{hid-sp18-517-ksw}}
- 	\label{fig:knimearch}
+\label{fig:knimearch}
 \end{figure}
 
 \section{Open Source and Licensed}
-KNIME was initially developed by a group of developers from silicon valley targetting
-pharmaceutical applications and the first version was released in 2006. The analytics 
-platform is released under Open Source GPLv3 license. Vendors can create wrappers 
-to facilitate their tool execution from within a KNIME workflow.
-Alongside KNIME AG the parent company also licenses commercial software. The 
-commercial version includes additional extensions that are suitable for larger teams or companies
-and a license fee is charged to such customers. The current model also accepts direct customer 
-engagements wherein KNIME developers develop a specific component for businesses though 
-at a charge, these components however are made available to public on the open source platform~\cite{hid-sp18-517-opensource}.
+KNIME was initially developed by a group of developers from silicon valley
+targetting pharmaceutical applications and the first version was released in
+2006. The analytics platform is released under Open Source GPLv3
+license. Vendors can create wrappers to facilitate their tool execution from
+within a KNIME workflow.  Alongside KNIME AG the parent company also licenses
+commercial software. The commercial version includes additional extensions that
+are suitable for larger teams or companies and a license fee is charged to such
+customers. The current model also accepts direct customer engagements wherein
+KNIME developers develop a specific component for businesses though at a charge,
+these components however are made available to public on the open source
+platform~\cite{hid-sp18-517-opensource}.
 
 \subsection{KNIME Analytics platform}
 KNIME analytics is the core of the product and is built on eclipse and hence you
@@ -117,6 +118,17 @@ nodes~\cite{hid-sp18-517-ch1sec1}.  KNIME analytics platform includes extensive
 data visualization capabilities that allows users to create interactive
 dashboards, charts and graphs~\cite{hid-sp18-517-ch5}.
 
+KNIME can be used to create data visualizations for performing exploratory data
+analysis as it supports many native visualization nodes including interactive
+visualizations.  It also allows to use R or Python or java script code to create
+charts or plots. Hiliting feature allows to highlight a certain category of data
+points ploteed on the scatter plot. For example in a classification algorithm, we
+can highlight the wrongly classified data points to distinguish them and
+highlight them on the plot. There are open street maps available that allow map
+visualizations for geo spatial data. A few other visualization that are
+supported are the R choropleth library as well as wordcloud visualization of
+text~\cite{hid-sp18-517-visual}.
+
 \subsection{KNIME Server}
 In a large scale implementation, scalability can be achieved by deploying a
 KNIME server. KNIME server scales the platform from an individual to a group or
@@ -143,17 +155,17 @@ or python within the workflow. Similarly Apache Hadoop, Spark and other Big Data
 open source projects can be integrated with KNIME through respective
 estensions. A good Big Data integration example is being able to import or
 export data from HDFS or performing analytics using Hive, Impala that are setup
-as KNIME nodes in a workflow, you can also transfer data between Apache Hive 
-and Apache Spark~\cite{hid-sp18-517-ksw}. A workflow can have Hive node as well 
-as SQL Server or Oracle node that can be combined or joined instead of having to 
-write complex joins and queries.The Big Data connectors
-are all open source and are certified by leading hadoop platforms such as
-cloudera, hortonworks and mapr~\cite{hid-sp18-517-bde}.  Similarly, extension
-for Apache Spark extensions is a set of nodes that enable a variety of tasks
-such as data manipulation, machine learning and so on~\cite{hid-sp18-517-spark}.
-For not so savvy developers this serves as a biggest advantage as they can still
-complete all the steps without actually having to write code. Ofcourse there is
-an option to write your scripts and use them in the nodes if you wish.
+as KNIME nodes in a workflow, you can also transfer data between Apache Hive and
+Apache Spark~\cite{hid-sp18-517-ksw}. A workflow can have Hive node as well as
+SQL Server or Oracle node that can be combined or joined instead of having to
+write complex joins and queries.The Big Data connectors are all open source and
+are certified by leading hadoop platforms such as cloudera, hortonworks and
+mapr~\cite{hid-sp18-517-bde}.  Similarly, extension for Apache Spark extensions
+is a set of nodes that enable a variety of tasks such as data manipulation,
+machine learning and so on~\cite{hid-sp18-517-spark}.  For not so savvy
+developers this serves as a biggest advantage as they can still complete all the
+steps without actually having to write code. Ofcourse there is an option to
+write your scripts and use them in the nodes if you wish.
 
 
 Big data extensions are included in the platform and include those for Apache
@@ -170,9 +182,19 @@ meachine learning space it supports all majority of predictive modeling
 algorithms for regression, classigication, Neural networks, Naive Bayes and most
 of the tree based models~\cite{hid-sp18-517-pml}.
 
-It also supports transferring data from and to H2O ~\cite{hid-sp18-517-h20}
+It also supports transferring data from and to H2O~\cite{hid-sp18-517-h20}
 which is a popular open source machine learning
 platform~\cite{hid-sp18-517-knimeh20}.
+
+\section{ETL}
+An important step in the data science process is that of pre-processing of data,
+as we know that around 80 percent of time is spent in cleaning and preparing
+data. To support this KNIME provides more than 100 pre-defined nodes that handle
+a varity of tasks such as row filtering based on regex, wildcard and so on,
+string manipulation, substituting of missing values, grouping data.  KNIME ETL
+function also allows to create a loop structure within a workflow that helps in
+repeating the procedure, for eample loading many files one after
+another~\cite{hid-sp18-517-etl}.
 
 \section{REST support}
 
@@ -181,8 +203,8 @@ allows you to configure nodes that can get data from these available REST
 services~\cite{hid-sp18-517-knimeapi}.  KNIME server also makes it possible to
 create a service that can be called using post and get methods, some of the
 examples of REST services are uploading and downloading of files, sentiment
-analysis and so on. Again all this can be done using KNIME workflow and nodes 
-on drag and drop graphical user interface~\cite{hid-sp18-517-knimerest}.
+analysis and so on. Again all this can be done using KNIME workflow and nodes on
+drag and drop graphical user interface~\cite{hid-sp18-517-knimerest}.
 
 \section{Simple Workflow}
 Lets consider an example of reading a ascii data file cluster the data and also
@@ -209,13 +231,13 @@ joins~\cite{hid-sp18-517-join}.
 \begin{figure}[!ht]
 	\centering\includegraphics[width=\columnwidth]{../images/node_repositories.png}
 	\caption{Node Repositories~\cite{hid-sp18-517-wf}}
- 	\label{fig:noderep}
+\label{fig:noderep}
 \end{figure}
 
 \begin{figure}[!ht]
 	\centering\includegraphics[width=\columnwidth]{../images/kmeans_flow.png}
 	\caption{k-means flow~\cite{hid-sp18-517-wf}}
- 	\label{fig:kmean}
+\label{fig:kmean}
 \end{figure}
 
 
@@ -223,28 +245,30 @@ joins~\cite{hid-sp18-517-join}.
 
 KNIME is used in almost every domain from government to pharma to manufacturing,
 some of common applications of KNIME are Social media mining, sentiment
-analysis, credit scoring, churn prediction, energy use prediction, outlier detection in medical
-claims, recommender systems, social media music recommender system, network traffic 
-reporting, Actuarial tables, address deduplication and so on~\cite{hid-sp18-517-applications}.  
-While KNIME is Open Source, KNIME AG extends the same analytics platform with extensions to offer increased
+analysis, credit scoring, churn prediction, energy use prediction, outlier
+detection in medical claims, recommender systems, social media music recommender
+system, network traffic reporting, Actuarial tables, address deduplication and
+so on~\cite{hid-sp18-517-applications}.  While KNIME is Open Source, KNIME AG
+extends the same analytics platform with extensions to offer increased
 productivity and collaboration~\cite{hid-sp18-517-opensource}.  Ninety percent
 of the revenue comes from licenses and most of that is used to add new features
 and development~\cite{hid-sp18-517-opensource}.
 
 \section{Conclusion}
 
-In todays world of analytics which is heavily focussed on scripting wherein usage of
-analytical tools such as R and python to perform various tasks in Data science
-cycle is common, however these tools are not user friendly and can sometimes be 
-overwhelming for users who are used to a graphical interface. KNIME fills in this gap 
-and provides not only an easy to use Graphical user interface but supports an array 
-of integrations which makes it a good choice. It has options for scalability provided 
-through a server version. A user friendly GUI that takes out the guess work and need 
-to know scripting and command syntax. It's easy integration with the popular hadoop 
-platforms, availability of extensions and above all the user friendly interface definitely
-takes out significant amount of complexity from the analysis process and makes it a 
-preferred tool by many especially in the medical sciences domain. It's rich library of 
-machine learning algorithms 
+In todays world of analytics which is heavily focussed on scripting wherein
+usage of analytical tools such as R and python to perform various tasks in Data
+science cycle is common, however these tools are not user friendly and can
+sometimes be overwhelming for users who are used to a graphical interface. KNIME
+fills in this gap and provides not only an easy to use Graphical user interface
+but supports an array of integrations which makes it a good choice. It has
+options for scalability provided through a server version. A user friendly GUI
+that takes out the guess work and need to know scripting and command
+syntax. It's easy integration with the popular hadoop platforms, availability of
+extensions and above all the user friendly interface definitely takes out
+significant amount of complexity from the analysis process and makes it a
+preferred tool by many especially in the medical sciences domain. It's rich
+library of machine learning algorithms
 
 \begin{acks}
 
