@@ -15,7 +15,8 @@ Documentation
 Access key
 ------------------------
 
-	Initial setup is required to be able to access AWS EC2 from BOTO wherein you provide the key and region details. You can find the key details from IAM console on AWS.
+	Initial setup is required to be able to access AWS EC2 from BOTO wherein you provide the key and region details. 
+	You can find the key details from IAM console on AWS.
 
 BOTO configuration
 ------------------
