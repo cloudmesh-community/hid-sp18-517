@@ -9,7 +9,7 @@ This tutorial is to guide you through the steps for using libcloud for Amazon We
 
 Documentation
 -------------
-	Documentation can be found at [https://libcloud.readthedocs.org](https://libcloud.readthedocs.org "libcloud")
+	Documentation can be found at [https://libcloud.readthedocs.org]
 
 Supported Python versions
 -------------------------
