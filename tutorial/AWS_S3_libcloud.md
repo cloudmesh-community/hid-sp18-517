@@ -115,8 +115,8 @@ Upload a file helps in uploading a local file to S3 bucket.
 References
 ------------
 
-https://docs.aws.amazon.com/AmazonS3/latest/dev/Introduction.html
-http://libcloud.readthedocs.io/en/latest/_modules/libcloud/storage/drivers/s3.html
-https://libcloud.readthedocs.io/en/latest/storage/examples.html
-http://libcloud.apache.org/apidocs/0.6.1/libcloud.storage.base.StorageDriver.html
+	https://docs.aws.amazon.com/AmazonS3/latest/dev/Introduction.html
+	http://libcloud.readthedocs.io/en/latest/_modules/libcloud/storage/drivers/s3.html
+	https://libcloud.readthedocs.io/en/latest/storage/examples.html
+	http://libcloud.apache.org/apidocs/0.6.1/libcloud.storage.base.StorageDriver.html
 
