@@ -9,19 +9,13 @@ This tutorial is to guide you through the steps for using libcloud for Amazon We
 
 Documentation
 -------------
-	Documentation can be found at [https://libcloud.readthedocs.org]
+	Documentation can be found at https://libcloud.readthedocs.org
 
 Supported Python versions
 -------------------------
 
     Python 2.5, 2.6, 2.7,
     Python 3 (since 0.7.1)
-
-Access key
-------------------------
-
-	To be able to access AWS S3 from libcloud we need the access key to be specified in the call. 
-	Access key can be setup on AWS console by navigating to My Security credentials->Encryption Keys->Access Keys.
 
 Requirements
 ------------
@@ -31,6 +25,12 @@ Setting up an AWS account online
 	- Login to AWS website at aws.amazon.com
 	- Click on "Complete Sign Up" button and follow instructions to create a new AWS account.
 	- Install apache-libcloud
+	
+Access key
+------------------------
+
+	To be able to access AWS S3 from libcloud we need the access key to be specified in the call. 
+	Access key can be setup on AWS console by navigating to My Security credentials->Encryption Keys->Access Keys.
 
 Installation
 ------------
