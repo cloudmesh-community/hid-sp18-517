@@ -15,7 +15,6 @@ Supported Python versions
 -------------------------
 
     Python 2.5, 2.6, 2.7,
-    PyPy,
     Python 3 (since 0.7.1)
 
 Access key
