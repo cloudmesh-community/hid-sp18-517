@@ -21,6 +21,7 @@ RUN apt-get update -q && apt-get install -qy \
 RUN pip install --upgrade pip
 RUN pip install Flask
 RUN apt install python-pip
+RUN pip install -r requirements.txt
 
 # Expose port 8080 on container
 EXPOSE 8080
@@ -36,7 +37,7 @@ WORKDIR hid-sp18-517/swagger/cloudmesh/fileupload
 
 # install required packages
 #RUN cd hid-sp18-517/swagger && pip install -r requirements.txt
-RUN pip install -r requirements.txt
+#RUN pip install -r requirements.txt
 
 # setup the service
 RUN make service
